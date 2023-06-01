@@ -1,0 +1,227 @@
+#root {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+}
+
+.App {
+  width: 100vw;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+div.buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -27vw;
+  bottom: 3vw;
+}
+
+button {
+  color: rgb(255, 255, 255);
+  border: none;
+  background-color: transparent;
+  margin: 1.2vw;
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+}
+
+button h1 {
+  margin-left: 1.2vw;
+  font-size: 2.4vw;
+  line-height: 6vw;
+}
+
+button div {
+  width: 6vw;
+  height: 6vw;
+  border-radius: 8vw;
+}
+
+@media only screen and (min-width: 768px) {
+  div.buttons {
+    left: -29vw;
+    bottom: 1vw;
+  }
+
+  button {
+    margin: 0.3vw;
+    z-index: 2;
+  }
+
+  button h1 {
+    margin-left: 0.3vw;
+    font-size: 0.6vw;
+    line-height: 2vw;
+  }
+
+  button div {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 2vw;
+  }
+
+}
+
+button.house div {
+  /* left: 14vw; */
+
+  background: url("../static/textures/houseTexture.png") repeat scroll 0 0 transparent;
+}
+
+button.building div {
+  /* left: 2vw; */
+  background: url("../static/textures/buildingTexture.png") repeat scroll 0 0 transparent;
+}
+
+button.water div {
+  /* left: 10vw; */
+  background: url("../static/textures/waterTexture.png") repeat scroll 0 0 transparent;
+}
+
+button.forest div {
+  /* left: 7vw; */
+  background: url("../static/textures/forestTexture.png") repeat scroll 0 0 transparent;
+}
+
+button.field div {
+  /* left: 17vw; */
+  background: url("../static/textures/fieldsTexture.png") repeat scroll 0 0 transparent;
+}
+
+.city {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+.city .text {
+  z-index: 2;
+  position: relative;
+  top: -10px;
+  left: -50%;
+  /* width: 40px; */
+  height: 30px;
+  border-radius: 10px;
+  /* background: #00000077;
+  border: 1px solid #ffffff77; */
+  color: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 15px;
+
+}
+
+.city .text,
+.city .pin {
+  transform: scale(0, 0);
+  transition: transform 0.3s;
+}
+
+.city.visible .text,
+.city.visible .pin {
+  transform: scale(1, 1);
+}
+
+
+.city .pin {
+  position: relative;
+  bottom: 10px;
+  left: -1px;
+  /* margin-left: 115px; */
+
+  border-radius: 50%;
+  border: 8px solid #fff;
+  width: 8px;
+  height: 8px;
+}
+
+.city .pin::after {
+  position: relative;
+  content: '';
+  width: 0px;
+  height: 0px;
+  bottom: -25px;
+  left: -6px;
+  border: 10px solid transparent;
+  border-top: 17px solid #fff;
+}
+
+div.help {
+  width: 8vw;
+  height: 8vw;
+  border-radius: 8vw;
+  background: linear-gradient(to top left, rgb(47, 0, 255), rgb(255, 145, 0));
+  z-index: 3;
+  position: absolute;
+  left: 46vw;
+  bottom: calc(50vh - 4vw);
+  text-align: center;
+  line-height: 8vw;
+}
+
+.help-text {
+  width: 8vw;
+  height: 8vw;
+  visibility: hidden;
+}
+
+div.help-background {
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 4;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  /* cursor:pointer; */
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.help-background p {
+  width: 70vw;
+  font-size: 4vw;
+  line-height: 6vw;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  div.help {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 2vw;
+    left: 49vw;
+    bottom: calc(50vh - 1vw);
+    text-align: center;
+    line-height: 2vw;
+  }
+
+  .help-text {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  div.help-background p {
+    width: 15vw;
+    font-size: 1vw;
+    line-height: 1.5vw;
+
+  }
+}

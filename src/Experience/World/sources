@@ -1,0 +1,59 @@
+export default [
+    {
+        name: 'houseModel',
+        type: 'gltfModel',
+        path: '../static/models/house.glb'
+    },
+    {
+        name: 'buildingModel',
+        type: 'gltfModel',
+        path: '../static/models/building.glb'
+    },
+    {
+        name: 'forestModel',
+        type: 'gltfModel',
+        path: '../static/models/forest.glb'
+    },
+    {
+        name: 'waterTexture',
+        type: 'texture',
+        path: '../static/textures/waterTexture.png'
+    },
+    {
+        name: 'houseTexture',
+        type: 'texture',
+        path: '../static/textures/houseTexture.png'
+    },
+        {
+        name: 'houseModelTexture',
+        type: 'texture',
+        path: '../static/textures/houseModelTexture.png'
+    },
+    {
+        name: 'fieldsTexture',
+        type: 'texture',
+        path: '../static/textures/fieldsTexture.png'
+    },
+    {
+        name: 'forestTexture',
+        type: 'texture',
+        path: '../static/textures/forestTexture.png'
+    },
+    {
+        name: 'forestModelTexture',
+        type: 'texture',
+        path: '../static/textures/forestModelTexture.png'
+    },
+    {
+        name: 'buildingTexture',
+        type: 'texture',
+        path: '../static/textures/buildingTexture.png'
+    },
+    {
+        name: 'buildingModelTexture',
+        type: 'texture',
+        path: '../static/textures/buildingModelTexture.png'
+    },
+]
+
+
